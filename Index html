@@ -1,1 +1,119 @@
 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>InfraJus | Núcleo de Acompanhamento Pericial</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#0B1F33;
+color:#F4EFE6;
+}
+
+header{
+text-align:center;
+padding:30px;
+border-bottom:1px solid #C8A96B;
+}
+
+header h1{
+margin:0;
+letter-spacing:2px;
+}
+
+header p{
+color:#C8A96B;
+margin-top:8px;
+}
+
+.container{
+display:flex;
+justify-content:center;
+padding:40px;
+}
+
+.card{
+background:#F4EFE6;
+color:#0B1F33;
+padding:25px;
+border-radius:10px;
+width:320px;
+}
+
+input{
+width:100%;
+padding:10px;
+margin:8px 0;
+border:1px solid #C8A96B;
+border-radius:6px;
+}
+
+button{
+width:100%;
+padding:10px;
+background:#C8A96B;
+border:none;
+cursor:pointer;
+font-weight:bold;
+}
+
+.dashboard{
+display:none;
+padding:20px;
+}
+
+.box{
+background:#F4EFE6;
+color:#0B1F33;
+padding:15px;
+margin-top:10px;
+border-radius:8px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>INFRAJUS</h1>
+<p>Núcleo de Acompanhamento Pericial</p>
+</header>
+
+<div class="container" id="login">
+<div class="card">
+<h3>Acesso ao Caso</h3>
+<input placeholder="Código da Perícia">
+<input placeholder="Usuário">
+<input type="password" placeholder="Senha">
+<button onclick="entrar()">Acessar</button>
+</div>
+</div>
+
+<div class="dashboard" id="painel">
+<div class="box">
+<h3>Caso em andamento</h3>
+<p>Status: Em análise técnica</p>
+<p>Progresso: 60%</p>
+</div>
+
+<div class="box">
+<h3>Evidências</h3>
+<p>📁 Arquivos anexados</p>
+<p>🎥 Vídeos periciais</p>
+<p>📄 Relatórios técnicos</p>
+</div>
+</div>
+
+<script>
+function entrar(){
+document.getElementById("login").style.display="none";
+document.getElementById("painel").style.display="block";
+}
+</script>
+
+</body>
+</html>
