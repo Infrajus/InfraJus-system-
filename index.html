@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
@@ -36,7 +36,27 @@
     button { width: 100%; padding: 14px; margin-top: 15px; border-radius: 8px; border: 1px solid #c8a24a; background: transparent; color: #c8a24a; font-weight: bold; cursor: pointer; letter-spacing: 2px; font-size: 13px; transition: 0.3s; text-transform: uppercase; }
     button:hover { background: #c8a24a; color: #041225; }
     .notice { margin-top: 25px; font-size: 11px; line-height: 1.6; color: rgba(245, 241, 232, 0.65); text-align: justify; border-top: 1px solid rgba(200, 162, 74, 0.15); padding-top: 15px; }
-    .footer { margin-top: 20px; font-size: 10px; color: rgba(200, 162, 74, 0.4); letter-spacing: 2px; }
+    
+    /* Novo ornamento sofisticado na base */
+    .footer-ornament {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .footer-line {
+      width: 40px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(200, 162, 74, 0.3));
+    }
+    .footer-line.right {
+      background: linear-gradient(90deg, rgba(200, 162, 74, 0.3), transparent);
+    }
+    .footer-diamond {
+      color: rgba(200, 162, 74, 0.4);
+      font-size: 10px;
+      margin: 0 8px;
+    }
   </style>
 </head>
 
@@ -60,12 +80,19 @@
       <input id="usuarioSenha" type="password" placeholder="Senha de acesso" />
     </div>
     <button id="btnAcessar" onclick="conectarPlanilha()">Acessar Sistema</button>
+    
     <div class="notice">
       Este sistema possui acesso restrito e destina-se exclusivamente ao contratante autorizado.  
       O compartilhamento de credenciais de acesso é de inteira responsabilidade do usuário titular.  
       A plataforma não realiza controle sobre o uso de login e senha fornecidos, sendo qualquer acesso realizado por terceiros de responsabilidade exclusiva do contratante.
     </div>
-    <div class="footer">INFRAJUS INTELIGÊNCIA PERICIAL</div>
+    
+    <!-- Substituído o texto por este ornamento elegante -->
+    <div class="footer-ornament">
+      <div class="footer-line"></div>
+      <div class="footer-diamond">♦</div>
+      <div class="footer-line right"></div>
+    </div>
   </div>
 
   <script>
