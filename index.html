@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+
+    
+    <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
@@ -9,7 +11,7 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #041225;
+      background-color: #041225 !important; /* Cor de fundo fixa */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -22,138 +24,50 @@
       max-width: 420px;
       padding: 24px;
       box-sizing: border-box;
-      background: transparent; /* Fundo infinito e uniforme */
+      background-color: #041225 !important; /* Mesma cor do fundo, sem diferença */
       text-align: center;
     }
 
-    .header {
-      margin-bottom: 25px;
-    }
-
-    .header h1 {
-      margin: 0;
-      font-size: 26px;
-      letter-spacing: 2px;
-      color: #f5f1e8;
-      font-weight: bold;
-    }
-
-    .header h2 {
-      margin: 8px 0 0 0;
-      font-size: 11px;
-      font-weight: normal;
-      color: #c8a24a;
-      letter-spacing: 3px;
-    }
-
-    .divider {
-      height: 1px;
-      background: linear-gradient(90deg, transparent, #c8a24a, transparent);
-      margin: 20px 0;
-    }
-
-    .field {
-      margin-bottom: 16px;
-      text-align: left;
-    }
-
-    .label {
-      font-size: 12px;
-      margin-bottom: 6px;
-      color: #c8a24a;
-      letter-spacing: 0.5px;
-    }
-
-    input {
-      width: 100%;
-      padding: 14px;
-      border-radius: 8px;
-      border: 1px solid rgba(200, 162, 74, 0.2);
-      outline: none;
-      font-size: 14px;
-      box-sizing: border-box;
-      background: #e9dfcf;
-      color: #1a1a1a;
-    }
-
-    button {
-      width: 100%;
-      padding: 14px;
-      margin-top: 15px;
-      border-radius: 8px;
-      border: 1px solid #c8a24a;
-      background: transparent;
-      color: #c8a24a;
-      font-weight: bold;
-      cursor: pointer;
-      letter-spacing: 2px;
-      font-size: 13px;
-      transition: 0.3s;
-      text-transform: uppercase;
-    }
-
-    button:hover {
-      background: #c8a24a;
-      color: #041225;
-    }
-
-    .notice {
-      margin-top: 25px;
-      font-size: 11px;
-      line-height: 1.6;
-      color: rgba(245, 241, 232, 0.65);
-      text-align: justify;
-      border-top: 1px solid rgba(200, 162, 74, 0.15);
-      padding-top: 15px;
-    }
-
-    .footer {
-      margin-top: 20px;
-      font-size: 10px;
-      color: rgba(200, 162, 74, 0.4);
-      letter-spacing: 2px;
-    }
+    .header { margin-bottom: 25px; }
+    .header h1 { margin: 0; font-size: 26px; letter-spacing: 2px; color: #f5f1e8; font-weight: bold; }
+    .header h2 { margin: 8px 0 0 0; font-size: 11px; font-weight: normal; color: #c8a24a; letter-spacing: 3px; }
+    .divider { height: 1px; background: linear-gradient(90deg, transparent, #c8a24a, transparent); margin: 20px 0; }
+    .field { margin-bottom: 16px; text-align: left; }
+    .label { font-size: 12px; margin-bottom: 6px; color: #c8a24a; letter-spacing: 0.5px; }
+    input { width: 100%; padding: 14px; border-radius: 8px; border: 1px solid rgba(200, 162, 74, 0.2); outline: none; font-size: 14px; box-sizing: border-box; background: #e9dfcf; color: #1a1a1a; }
+    button { width: 100%; padding: 14px; margin-top: 15px; border-radius: 8px; border: 1px solid #c8a24a; background: transparent; color: #c8a24a; font-weight: bold; cursor: pointer; letter-spacing: 2px; font-size: 13px; transition: 0.3s; text-transform: uppercase; }
+    button:hover { background: #c8a24a; color: #041225; }
+    .notice { margin-top: 25px; font-size: 11px; line-height: 1.6; color: rgba(245, 241, 232, 0.65); text-align: justify; border-top: 1px solid rgba(200, 162, 74, 0.15); padding-top: 15px; }
+    .footer { margin-top: 20px; font-size: 10px; color: rgba(200, 162, 74, 0.4); letter-spacing: 2px; }
   </style>
 </head>
 
 <body>
-
   <div class="container">
-
     <div class="header">
       <h1>INFRAJUS</h1>
       <h2>INTELIGÊNCIA PERICIAL</h2>
     </div>
-
     <div class="divider"></div>
-
     <div class="field">
       <div class="label">Código da Perícia</div>
       <input id="codigoPericia" type="text" placeholder="Digite o código" />
     </div>
-
     <div class="field">
       <div class="label">Login</div>
       <input id="usuarioLogin" type="text" placeholder="Usuário autorizado" />
     </div>
-
     <div class="field">
       <div class="label">Senha</div>
       <input id="usuarioSenha" type="password" placeholder="Senha de acesso" />
     </div>
-
     <button id="btnAcessar" onclick="conectarPlanilha()">Acessar Sistema</button>
-
     <div class="notice">
       Este sistema possui acesso restrito e destina-se exclusivamente ao contratante autorizado.  
       O compartilhamento de credenciais de acesso é de inteira responsabilidade do usuário titular.  
       A plataforma não realiza controle sobre o uso de login e senha fornecidos, sendo qualquer acesso realizado por terceiros de responsabilidade exclusiva do contratante.
     </div>
-
-    <div class="footer">
-      INFRAJUS INTELIGÊNCIA PERICIAL
-    </div>
-
+    <div class="footer">INFRAJUS INTELIGÊNCIA PERICIAL</div>
   </div>
 
   <script>
@@ -162,43 +76,22 @@
       const codigo = document.getElementById('codigoPericia').value.trim();
       const login = document.getElementById('usuarioLogin').value.trim();
       const senha = document.getElementById('usuarioSenha').value.trim();
-
-      if (!codigo || !login || !senha) {
-        alert('Por favor, preencha todos os campos antes de acessar.');
-        return;
-      }
-
+      if (!codigo || !login || !senha) { alert('Por favor, preencha todos os campos.'); return; }
       btn.innerText = 'VERIFICANDO...';
       btn.disabled = true;
-
       const urlPlanilha = "https://script.google.com/macros/s/AKfycbwhBQfbjsA4A4oRZ_gixQMwvP_O_h845bEHy23QJEELsCgY_cstjswSsHfmQTaFxcao/exec";
-
       fetch(urlPlanilha + "?codigo=" + encodeURIComponent(codigo) + "&login=" + encodeURIComponent(login) + "&senha=" + encodeURIComponent(senha))
         .then(response => response.json())
         .then(data => {
           btn.innerText = 'ACESSAR SISTEMA';
           btn.disabled = false;
-          
           if (data.status === "sucesso") {
-            alert('Acesso autorizado! Redirecionando para o andamento da perícia...');
-            if (data.urlDocumento) {
-              window.location.href = data.urlDocumento;
-            }
-          } else {
-            alert('Erro: ' + data.mensagem);
-          }
+            alert('Acesso autorizado!');
+            if (data.urlDocumento) window.location.href = data.urlDocumento;
+          } else { alert('Erro: ' + data.mensagem); }
         })
-        .catch(error => {
-          btn.innerText = 'ACESSAR SISTEMA';
-          btn.disabled = false;
-          console.error('Erro:', error);
-          alert('Houve um problema ao conectar com o sistema. Tente novamente.');
-        });
+        .catch(error => { btn.innerText = 'ACESSAR SISTEMA'; btn.disabled = false; alert('Houve um problema.'); });
     }
   </script>
-
 </body>
 </html>
-
-      
-      
