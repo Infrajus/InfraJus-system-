@@ -172,8 +172,8 @@
       btn.innerText = 'Verificando...';
       btn.disabled = true;
 
-      // ATENÇÃO: Cole o seu link do Google Script entre as aspas abaixo se ele não for esse:
-      const urlPlanilha = "COLE_AQUI_O_LINK_DA_SUA_PLANILHA";
+      // Seu link do Google Script atualizado e definitivo
+      const urlPlanilha = "https://script.google.com/macros/s/AKfycbwhBQfbjsA4A4oRZ_gixQMwvP_O_h845bEHy23QJEELsCgY_cstjswSsHfmQTaFxcao/exec";
 
       fetch(urlPlanilha + "?codigo=" + encodeURIComponent(codigo) + "&login=" + encodeURIComponent(login) + "&senha=" + encodeURIComponent(senha))
         .then(response => response.json())
@@ -201,3 +201,4 @@
 
 </body>
 </html>
+
